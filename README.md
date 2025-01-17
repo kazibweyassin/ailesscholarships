@@ -110,7 +110,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 For questions or support, contact:
 - **Name**: Yassin Kazibwe
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **Email**: [kazibweusama@gmail.com](mailto:your-email@example.com)
 - **Website**: [Ailes Travel](https://www.ailestravel.com)
 
 Join us in empowering individuals through education! 🌍
