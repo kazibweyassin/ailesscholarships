@@ -111,7 +111,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 For questions or support, contact:
 - **Name**: Yassin Kazibwe
 - **Email**: [kazibweusama@gmail.com](mailto:your-email@example.com)
-- **Website**: [Ailes Travel](https://www.ailestravel.com)
+- **Website**: [Ailes Travel](https://www.ailestravels.com)
 
 Join us in empowering individuals through education! 🌍
 
