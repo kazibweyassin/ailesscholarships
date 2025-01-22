@@ -1,3 +1,4 @@
+"use client";
 import avatar1 from "@/assets/avatar-1.png";
 import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
@@ -66,5 +67,17 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
-  return null;
+  return (
+    <section className="bg-white">
+      <div className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950">
+       <div className="flex justify-center">
+        <div className="tag">Testimonials</div>
+       </div>
+        <div>
+          <h2 className="section-title">What Our Users Are Saying</h2>
+          <p className="section-description">Read testimonials from our satisfied users</p>
+        </div>
+      </div>
+    </section>
+  );
 };
