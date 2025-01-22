@@ -224,7 +224,9 @@ export const ProductShowcase: React.FC = () => (
     </section>
 
     {/* Call-to-Action Section */}
-    <section className="bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950 py-16">
+
+    {/* <section className="bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950 py-16"> */}
+<section className=" bg-[rgb(97,3,69)]  py-16">
       <SectionContainer className="text-center text-white">
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Future?</h2>
         <p className="text-lg mb-6">
