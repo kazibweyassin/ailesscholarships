@@ -18,7 +18,9 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       {/* Scholarship Announcement Section */}
-      <div className="flex justify-center items-center py-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white">
+      {/* <div className="flex justify-center items-center py-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white"> */}
+
+      <div className="flex justify-center items-center py-2 bg-[rgb(32,44,89)] text-white">
         <div className="flex items-center gap-3">
           <p className="text-sm font-bold">Access Fully Funded Scholarships</p>
           <ArrowRight className="h-4 w-4" />
@@ -61,6 +63,7 @@ export const Header = () => {
           <button
             onClick={handleSignUp}
             className="bg-purple-600 hover:bg-purple-700 transition text-white px-4 py-2 rounded-lg font-medium"
+
           >
             Sign Up Now
           </button>

@@ -91,6 +91,8 @@ export default function PartnersShowcase() {
 
   return (
     <section className="relative min-h-screen py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
+     {/* <section className="relative min-h-screen py-20 bg-gray-500 overflow-hidden"> */}
+
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:32px_32px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-800/50 to-purple-900/50" />
