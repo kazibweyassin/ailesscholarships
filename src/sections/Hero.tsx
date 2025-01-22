@@ -17,7 +17,9 @@ export const Hero: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <section className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950">
+    // <section className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950">
+
+    <section className="relative min-h-screen overflow-x-clip bg-[rgb(32,44,89)]">
       <div className="absolute inset-0 bg-opacity-5" />
 
       <div className="container mx-auto px-4 py-16 md:py-24">

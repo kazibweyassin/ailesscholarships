@@ -69,11 +69,11 @@ const PartnerCard = ({ data, isActive, onClick }) => (
         />
       </div>
       <div className="flex-1">
-        <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+        <h3 className="text-lg font-semibold text-black flex items-center gap-2">
           {data.fullName}
           {isActive && <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />}
         </h3>
-        <p className="text-white/90 mt-2 text-sm">{data.description}</p>
+        <p className="text-gray-800 mt-2 text-sm">{data.description}</p>
       </div>
     </div>
     
@@ -90,7 +90,9 @@ export default function PartnersShowcase() {
   const [activePartner, setActivePartner] = useState(0);
 
   return (
-    <section className="relative min-h-screen py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
+    // <section className="relative min-h-screen py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
+
+    <section className="relative min-h-screen py-20 bg-gray-300 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:32px_32px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-800/50 to-purple-900/50" />
@@ -98,10 +100,10 @@ export default function PartnersShowcase() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
             Partnering with World-Class Institutions
           </h2>
-          <p className="text-lg text-white/80 mb-8">
+          <p className="text-lg text-gray-800 mb-8">
             Our partnerships with leading educational institutions ensure you get access to
             the best scholarship opportunities worldwide.
           </p>
@@ -129,11 +131,11 @@ export default function PartnersShowcase() {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <p className="text-white/90 mb-4">
+          <p className="text-gray-800 mb-4">
             Ready to start your scholarship journey?
           </p>
-          <button className="inline-flex items-center px-6 py-2 text-sm text-white/90 
-            border border-white/20 rounded-full hover:bg-white/10 transition-colors gap-2">
+          <button className="inline-flex items-center px-6 py-2 text-sm text-gray-800 
+            border border-gray-300 rounded-full hover:bg-gray-200 transition-colors gap-2">
             Create Free Account
             <ArrowRight className="w-4 h-4" />
           </button>
