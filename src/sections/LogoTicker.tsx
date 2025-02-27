@@ -42,14 +42,26 @@ const PARTNER_DATA = [
   }
 ];
 
-const StatBox = ({ label, value }) => (
+const StatBox = ({ label, value }: { label: string, value: string }) => (
   <div className="flex flex-col items-center p-3 bg-white/10 rounded-lg">
     <span className="text-sm text-white/70">{label}</span>
     <span className="text-lg font-bold text-white">{value}</span>
   </div>
 );
 
-const PartnerCard = ({ data, isActive, onClick }) => (
+interface PartnerData {
+  name: string;
+  fullName: string;
+  description: string;
+  logoSrc: string;
+  stats: {
+    scholarships: string;
+    fundingAmount: string;
+    successRate: string;
+  };
+}
+
+const PartnerCard = ({ data, isActive, onClick }: { data: PartnerData; isActive: boolean; onClick: () => void }) => (
   <div 
     className={`relative p-6 rounded-xl transition-all duration-300 cursor-pointer
       ${isActive 
@@ -86,16 +98,16 @@ const PartnerCard = ({ data, isActive, onClick }) => (
   </div>
 );
 
-export default function PartnersShowcase() {
+export function LogoTicker() {
   const [activePartner, setActivePartner] = useState(0);
 
   return (
     // <section className="relative min-h-screen py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 overflow-hidden">
 
-    <section className="relative min-h-screen py-20 bg-gray-300 overflow-hidden">
+    <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-200 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:32px_32px]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-800/50 to-purple-900/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-800/50 to-blue-900/50" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}

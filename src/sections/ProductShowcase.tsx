@@ -153,7 +153,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = React.memo(({ photo, nam
         {photo}
       </div>
     )}
-    <p className="text-gray-700 italic">"{quote}"</p>
+    <p className="text-gray-700 italic">&ldquo;{quote}&rdquo;</p>
     <h3 className="font-semibold text-gray-900 mt-4">{name}</h3>
   </div>
 ));
@@ -226,7 +226,7 @@ export const ProductShowcase: React.FC = () => (
     {/* Call-to-Action Section */}
 
     {/* <section className="bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950 py-16"> */}
-<section className=" bg-[rgb(97,3,69)]  py-16">
+<section className="bg-blue-900 py-16">
       <SectionContainer className="text-center text-white">
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Future?</h2>
         <p className="text-lg mb-6">

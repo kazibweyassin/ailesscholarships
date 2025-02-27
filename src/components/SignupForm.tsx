@@ -1,9 +1,10 @@
-'use client'; // Add this line at the top to mark the file as a Client Component
+'use client'; // Mark the file as a Client Component
 
 import React, { useState, FormEvent } from 'react';
 
 const SignupForm: React.FC = () => {
-  const [fullname, setFullname] = useState<string>('');
+  const [firstName, setFirstName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
@@ -21,7 +22,7 @@ const SignupForm: React.FC = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          username: fullname,
+          username: `${firstName} ${lastName}`,
           email,
           password,
         }),
@@ -29,14 +30,14 @@ const SignupForm: React.FC = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        alert(errorData.message[0].messages[0].message);  // Display error message if any
+        alert(errorData?.message?.[0]?.messages?.[0]?.message || 'Error signing up!');
         return;
       }
 
       alert('Signup successful!');
     } catch (error) {
-      console.error('Error signing up:', error);  // Log the error for debugging
-      alert('Error signing up');
+      console.error('Error signing up:', error);
+      alert('Error signing up!');
     }
   };
 
@@ -46,12 +47,22 @@ const SignupForm: React.FC = () => {
         <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700">Fullname</label>
+            <label className="block text-gray-700">First Name</label>
             <input
               type="text"
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Last Name</label>
+            <input
+              type="text"
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               required
             />
           </div>
@@ -92,12 +103,18 @@ const SignupForm: React.FC = () => {
             Sign Up
           </button>
         </form>
-        <div className="flex justify-center items-center mt-6">
-          <button className="bg-red-500 text-white px-4 py-2 rounded mr-2">Sign in with Google</button>
-          <button className="bg-blue-700 text-white px-4 py-2 rounded">Sign in with Facebook</button>
+        <div className="flex justify-center items-center mt-6 gap-4">
+          <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+            Sign in with Google
+          </button>
+          <button className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">
+            Sign in with Facebook
+          </button>
         </div>
         <div className="mt-4 text-center">
-          <a href="/signin" className="text-blue-500">Already have an account? Sign In</a>
+          <a href="/signin" className="text-blue-500 hover:underline">
+            Already have an account? Sign In
+          </a>
         </div>
       </div>
     </div>

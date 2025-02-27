@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { SiFacebook, SiGitter, SiLinkedin, SiInstagram } from 'react-icons/si';
+import Logo from '@/assets/logotiger.png';
+
 
 type FooterLinkType = {
   label: string;
@@ -103,19 +105,20 @@ const NewsletterForm: React.FC = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-b from-slate-900 to-slate-950">
+    <footer id='contact' className="bg-gradient-to-b from-slate-900 to-blue-950">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2">
-                {/* src="/images/logo.png"
-                src="/api/placeholder/40/40"
+              <Image
+                src={Logo}
                 alt="Ailes Scholarships"
                 width={40}
                 height={40}
-                className="rounded"/> */}
+                className="rounded"
+              />
               <span className="text-xl font-bold text-slate-50">Ailes Scholarships</span>
             </Link>
             <p className="mt-4 text-slate-300 max-w-md">

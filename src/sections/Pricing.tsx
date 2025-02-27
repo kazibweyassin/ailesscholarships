@@ -50,10 +50,11 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section className="bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950 py-12 text-white">
+    <section id="pricing" className="bg-gradient-to-br from-blue-500 via-indigo-800 to-indigo-950 py-12 text-white">
       <div className="container mx-auto px-6">
         <header className="text-center mb-12">
           <h2 className=" section-title text-3xl md:text-4xl font-bold text-white">
+            <a href=""></a>
             Choose Your Plan
           </h2>
           <p className="text-lg md:text-xl text-blue-100/80">

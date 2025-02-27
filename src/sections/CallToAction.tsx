@@ -27,17 +27,17 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-black-100 to-white-200  py-16 sm:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-sky-50 to-blue-100 py-16 sm:py-24">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-4 top-1/4 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl" />
-        <div className="absolute -right-4 bottom-1/4 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl" />
+        <div className="absolute -left-4 top-1/4 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
+        <div className="absolute -right-4 bottom-1/4 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
       </div>
 
       <div className="relative container mx-auto px-4 sm:px-6">
         <div className="text-center">
           {/* Icon */}
-          <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-purple-600 text-white">
+          <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white">
             <Bell className="h-8 w-8" />
           </div>
 
@@ -45,7 +45,8 @@ const CallToAction = () => {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Start Your Academic Journey Today
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 leading-relaxed">
+          <p 
+          className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 leading-relaxed">
             Join our thriving community of scholars and unlock exclusive resources, scholarship opportunities, 
             and personalized guidance for your academic success.
           </p>
@@ -63,7 +64,7 @@ const CallToAction = () => {
                   placeholder="Enter your email address"
                   className={`block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 
                     ring-inset placeholder:text-gray-400 
-                    focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 
+                    focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 
                     ${status === 'error' ? 'ring-red-500 focus:ring-red-500' : 'ring-gray-300'}`}
                   required
                 />
@@ -73,7 +74,7 @@ const CallToAction = () => {
                 disabled={!email}
                 className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm 
                   transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 
-                  ${!email ? 'bg-gray-400 cursor-not-allowed' : 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-600'}`}
+                  ${!email ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-600'}`}
               >
                 Get Started
               </button>
@@ -82,7 +83,7 @@ const CallToAction = () => {
 
           {/* Alerts */}
           {status === 'success' && (
-            <Alert className="mx-auto mt-6 max-w-xl bg-green-50 text-green-800">
+            <Alert className="mx-auto mt-6 max-w-xl bg-blue-500 text-blue-800">
               <AlertDescription>
                 Thank you for signing up! Check your email for next steps.
               </AlertDescription>
@@ -115,8 +116,8 @@ const CallToAction = () => {
           <div className="mt-10">
             <button
               type="button"
-              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
-            >
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+            > <a href="/"></a>
               Learn more about our programs
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>

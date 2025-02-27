@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import ArrowIcon from "@/assets/arrow-right.svg";
-import books from "@/assets/books.png";
-import hand from "@/assets/Hand.png";
+import head from "@/assets/head.jpg";
 import Image from "next/image";
 
 export const Hero: React.FC = () => {
@@ -19,7 +18,7 @@ export const Hero: React.FC = () => {
   return (
     // <section className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-purple-500 via-purple-900 to-purple-950">
 
-    <section className="relative min-h-screen overflow-x-clip bg-[rgb(32,44,89)]">
+    <section id="about" className="relative min-h-screen overflow-x-clip bg-gradient-to-br from-blue-600 via-indigo-800 to-indigo-950">
       <div className="absolute inset-0 bg-opacity-5" />
 
       <div className="container mx-auto px-4 py-16 md:py-24">
@@ -83,7 +82,7 @@ export const Hero: React.FC = () => {
           {/* Right Column - Image */}
           <div className="mt-20 md:mt-0 relative h-[400px] lg:h-[600px]">
             <Image
-              src={books}
+              src={head}
               alt="Educational resources and opportunities"
               className="rounded-xl"
               layout="fill"
