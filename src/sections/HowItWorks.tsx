@@ -69,6 +69,7 @@ const HowItWorks = () => {
         duration: 0.6
       }
     },
+    
     hover: {
       scale: 1.05,
       transition: {

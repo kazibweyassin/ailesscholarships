@@ -1,8 +1,11 @@
 'use client'; // Mark the file as a Client Component
 
 import React, { useState, FormEvent } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const SignupForm: React.FC = () => {
+  const { loginWithRedirect } = useAuth0();
+
   const [firstName, setFirstName] = useState<string>('');
   const [lastName, setLastName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -103,14 +106,22 @@ const SignupForm: React.FC = () => {
             Sign Up
           </button>
         </form>
+
         <div className="flex justify-center items-center mt-6 gap-4">
-          <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+          <button
+            onClick={() => loginWithRedirect({ authorizationParams: { connection: 'google' } })}
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+          >
             Sign in with Google
           </button>
-          <button className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">
+          <button
+            onClick={() => loginWithRedirect({ authorizationParams: { connection: 'facebook' } })}
+            className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800"
+          >
             Sign in with Facebook
           </button>
         </div>
+
         <div className="mt-4 text-center">
           <a href="/signin" className="text-blue-500 hover:underline">
             Already have an account? Sign In
