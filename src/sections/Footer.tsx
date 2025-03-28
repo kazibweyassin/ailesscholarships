@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { SiFacebook, SiGitter, SiLinkedin, SiInstagram } from 'react-icons/si';
-import Logo from '@/assets/logotiger.png';
+import Logo from '@/assets/logo.png';
 
 
 type FooterLinkType = {
@@ -144,7 +144,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-3 text-slate-300">
                 <MapPin className="w-5 h-5 text-indigo-400" />
-                <span>123 Education Street, Knowledge City-Kampala</span>
+                <span>123 Education Street, Knowledge Dublin</span>
               </div>
             </div>
 

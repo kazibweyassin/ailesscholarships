@@ -27,7 +27,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-sky-50 to-blue-100 py-16 sm:py-24">
+    <section className="relative overflow-hidden bg-white py-16 sm:py-24">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-4 top-1/4 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
